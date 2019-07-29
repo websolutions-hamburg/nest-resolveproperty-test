@@ -26,7 +26,7 @@ export class RecipesResolver {
     return this.recipesService.findAll(recipesArgs);
   }
 
-  @ResolveProperty()
+  @ResolveProperty('title2', () => String)
   async title2(): Promise<string> {
     return '';
   }
